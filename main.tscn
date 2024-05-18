@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmt4hdxamxuqo"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_l7bfh"]
+[ext_resource type="PackedScene" uid="uid://h7jba8nvsxed" path="res://sheep.tscn" id="2_7ibej"]
+[ext_resource type="PackedScene" uid="uid://bor04e6fwvy54" path="res://player.tscn" id="3_xidrt"]
+
+[sub_resource type="Curve2D" id="Curve2D_4txny"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 34, 27, 0, 0, 0, 0, 289, 25, 0, 0, 0, 0, 288, 160, 0, 0, 0, 0, 35, 162, 0, 0, 0, 0, 35, 26, 0, 0, 0, 0, 34, 27)
+}
+point_count = 6
+
+[node name="Main" type="Node"]
+script = ExtResource("1_l7bfh")
+sheep_scene = ExtResource("2_7ibej")
+
+[node name="SheepPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_4txny")
+
+[node name="SheepSpawnLocation" type="PathFollow2D" parent="SheepPath"]
+position = Vector2(34, 27)
+rotation = -0.00784298
+
+[node name="Player" parent="." instance=ExtResource("3_xidrt")]
