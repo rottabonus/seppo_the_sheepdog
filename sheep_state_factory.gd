@@ -7,6 +7,7 @@ var states: Dictionary = {}
 
 func _ready():
 	for child in get_children():
+		print(child)
 		if child is State:
 			states[child.name.to_lower()] = child
 			child.Transitioned.connect(on_child_transition)
@@ -14,6 +15,17 @@ func _ready():
 	if initial_state:
 		initial_state.enter()
 		current_state = initial_state
+		
+func change_state(state_name):
+	if current_state:
+		current_state.exit()
+
+	var new_state = states.get(state_name.to_lower())
+	if !new_state:
+		return
+		
+	new_state.enter()
+	current_state = new_state
 
 func _process(delta):
 	if current_state:

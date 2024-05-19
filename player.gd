@@ -1,13 +1,14 @@
 extends Area2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
+@export var speed = 400
+var screen_size
+signal BarkMovement
 
 func _ready():
 	screen_size = get_viewport_rect().size
 
 func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
+	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -19,6 +20,12 @@ func _process(delta):
 		
 	if Input.is_action_pressed("bark"):
 		$AudioStreamPlayer.play()
+		$BarkInfluence/CollisionShape2D.set_disabled(false)
+		$BarkTimer.start()
+		
+		var bodies = $BarkInfluence.get_overlapping_bodies()
+		for body in bodies:
+			body.move_from_bark()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -29,3 +36,7 @@ func _process(delta):
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+
+
+func _on_bark_timer_timeout():
+	$BarkInfluence/CollisionShape2D.set_disabled(true)

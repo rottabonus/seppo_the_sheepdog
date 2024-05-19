@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://h7jba8nvsxed"]
+[gd_scene load_steps=40 format=3 uid="uid://h7jba8nvsxed"]
 
 [ext_resource type="Script" path="res://sheep.gd" id="1_gjao2"]
 [ext_resource type="Texture2D" uid="uid://dkbiwyhx6bfe6" path="res://sheep_walk.png" id="1_p3vdj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://sheep_walk.gd" id="7_enqrc"]
 [ext_resource type="Script" path="res://sheep_state_factory.gd" id="7_vondy"]
 [ext_resource type="Script" path="res://sheep_idle.gd" id="9_7er7s"]
+[ext_resource type="Script" path="res://SheepBarkMove.gd" id="10_vvfto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqxb3"]
 atlas = ExtResource("2_40vdm")
@@ -230,7 +231,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdko4"]
 radius = 12.0
 
-[node name="Sheep" type="CharacterBody2D"]
+[node name="Sheep" type="CharacterBody2D" groups=["Sheep"]]
 script = ExtResource("1_gjao2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -241,6 +242,7 @@ animation = &"idle"
 position = Vector2(0, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cdko4")
+debug_color = Color(0.65199, 0.447042, 0.696309, 0.42)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("7_vondy")
@@ -252,3 +254,7 @@ sheep = NodePath("../..")
 
 [node name="SheepIdle" type="Node" parent="StateMachine"]
 script = ExtResource("9_7er7s")
+
+[node name="SheepBarkMove" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
+script = ExtResource("10_vvfto")
+sheep = NodePath("../..")

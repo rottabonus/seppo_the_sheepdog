@@ -19,3 +19,7 @@ func _physics_process(delta):
 			
 	else: 
 		$AnimatedSprite2D.play("idle")
+		
+
+func move_from_bark():
+	$StateMachine.change_state("SheepBarkMove")
