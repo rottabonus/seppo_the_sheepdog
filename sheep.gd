@@ -6,6 +6,7 @@ func _ready():
 
 func _physics_process(delta):
 	move_and_slide()
+	#move_and_collide(velocity)
 	
 	if velocity.length() > 0:
 		

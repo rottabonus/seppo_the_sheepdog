@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 400
 var screen_size
@@ -25,7 +25,8 @@ func _process(delta):
 		
 		var bodies = $BarkInfluence.get_overlapping_bodies()
 		for body in bodies:
-			body.move_from_bark()
+			if body.name != "Player":
+				body.move_from_bark()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed

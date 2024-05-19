@@ -124,7 +124,7 @@ size = Vector2(31, 37)
 [sub_resource type="CircleShape2D" id="CircleShape2D_207c1"]
 radius = 44.0454
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_q0ssl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -136,7 +136,6 @@ frame_progress = 0.00263363
 position = Vector2(3.5, 0.500014)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_qb8s3")
-disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3jcr5")

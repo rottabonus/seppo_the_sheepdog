@@ -10,6 +10,7 @@ var wander_time: float
 func randomize_wander():
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1,1)).normalized()
 	wander_time = randf_range(1, 3)
+	#print("move direction (walk): ", move_direction)
 	
 func enter():
 	randomize_wander()
