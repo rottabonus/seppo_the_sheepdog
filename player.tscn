@@ -118,14 +118,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb8s3"]
-size = Vector2(31, 37)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m3q6g"]
+radius = 7.0
+height = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_207c1"]
 radius = 44.0454
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(50, 86)
 script = ExtResource("1_q0ssl")
+speed = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1ohxt")
@@ -133,9 +136,9 @@ animation = &"run"
 frame_progress = 0.00263363
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, 0.500014)
+position = Vector2(4, 9)
 rotation = 1.5708
-shape = SubResource("RectangleShape2D_qb8s3")
+shape = SubResource("CapsuleShape2D_m3q6g")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3jcr5")
@@ -143,11 +146,13 @@ stream = ExtResource("5_3jcr5")
 [node name="BarkInfluence" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarkInfluence"]
-position = Vector2(3, 1)
+position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_207c1")
 disabled = true
 
 [node name="BarkTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="BarkTimer" to="." method="_on_bark_timer_timeout"]

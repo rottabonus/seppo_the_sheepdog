@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://h7jba8nvsxed"]
+[gd_scene load_steps=41 format=3 uid="uid://h7jba8nvsxed"]
 
 [ext_resource type="Script" path="res://sheep.gd" id="1_gjao2"]
 [ext_resource type="Texture2D" uid="uid://dkbiwyhx6bfe6" path="res://sheep_walk.png" id="1_p3vdj"]
@@ -229,20 +229,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdko4"]
-radius = 12.0
+radius = 8.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nv3dx"]
+radius = 8.0
 
 [node name="Sheep" type="CharacterBody2D" groups=["Sheep"]]
+disable_mode = 1
 script = ExtResource("1_gjao2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0qf5j")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cdko4")
-debug_color = Color(0.65199, 0.447042, 0.696309, 0.42)
+debug_color = Color(0.355147, 0.58006, 0.597915, 0.42)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("7_vondy")
@@ -258,3 +262,14 @@ script = ExtResource("9_7er7s")
 [node name="SheepBarkMove" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
 script = ExtResource("10_snxhm")
 sheep = NodePath("../..")
+
+[node name="SheepCollisionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SheepCollisionArea"]
+position = Vector2(-1, 9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nv3dx")
+debug_color = Color(0.919127, 0.582557, 0.830364, 0.42)
+
+[connection signal="body_entered" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_entered"]
+[connection signal="body_exited" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_exited"]
