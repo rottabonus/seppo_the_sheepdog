@@ -20,13 +20,14 @@ func _process(delta):
 		
 		var bodies = $BarkInfluence.get_overlapping_bodies()
 		for body in bodies:
-			if body.name != "Player":
+			if body.has_method("move_from_bark"):
 				body.move_from_bark()
 
 	if velocity.length() > 0:
 		if velocity.y > 0:
-			# todo: missing tail in run toward animation
 			$AnimatedSprite2D.play("run_towards")
+		elif velocity.y < 0:
+			$AnimatedSprite2D.play("run_back")
 		else:
 			$AnimatedSprite2D.play("run")
 			$AnimatedSprite2D.flip_h = velocity.x < 0
