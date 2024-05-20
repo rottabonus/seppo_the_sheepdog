@@ -24,8 +24,12 @@ func _process(delta):
 				body.move_from_bark()
 
 	if velocity.length() > 0:
-		$AnimatedSprite2D.play("run")
-		$AnimatedSprite2D.flip_h = velocity.x < 0
+		if velocity.y > 0:
+			# todo: missing tail in run toward animation
+			$AnimatedSprite2D.play("run_towards")
+		else:
+			$AnimatedSprite2D.play("run")
+			$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.play("idle")
 

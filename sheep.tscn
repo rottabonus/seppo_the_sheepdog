@@ -1,7 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://h7jba8nvsxed"]
+[gd_scene load_steps=37 format=3 uid="uid://h7jba8nvsxed"]
 
 [ext_resource type="Script" path="res://sheep.gd" id="1_gjao2"]
-[ext_resource type="Texture2D" uid="uid://dkbiwyhx6bfe6" path="res://sheep_walk.png" id="1_p3vdj"]
 [ext_resource type="Texture2D" uid="uid://k48gbe8et0hr" path="res://back_walk.png" id="2_40vdm"]
 [ext_resource type="Texture2D" uid="uid://f50uyppb6ga6" path="res://idle.png" id="2_kej0n"]
 [ext_resource type="Texture2D" uid="uid://icc1mjh35kpy" path="res://front_walk.png" id="3_qkwxi"]
@@ -107,18 +106,6 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("5_mv3yw")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tdt0k"]
-atlas = ExtResource("1_p3vdj")
-region = Rect2(0, 0, 29, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lguj"]
-atlas = ExtResource("1_p3vdj")
-region = Rect2(29, 0, 29, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mnnrn"]
-atlas = ExtResource("1_p3vdj")
-region = Rect2(58, 0, 29, 24)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_0qf5j"]
 animations = [{
 "frames": [{
@@ -212,20 +199,6 @@ animations = [{
 "loop": true,
 "name": &"side_walk",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tdt0k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6lguj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mnnrn")
-}],
-"loop": true,
-"name": &"walk_old",
-"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdko4"]
@@ -241,7 +214,7 @@ script = ExtResource("1_gjao2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0qf5j")
-animation = &"idle"
+animation = &"back_walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

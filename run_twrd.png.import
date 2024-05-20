@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkbiwyhx6bfe6"
-path="res://.godot/imported/sheep_walk.png-33e98e482f80da54c9c92c51f012aa74.ctex"
+uid="uid://fcgbrpip4qqp"
+path="res://.godot/imported/run_twrd.png-e270dd8606196fbb9ed07d23d7c3d5cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sheep_walk.png"
-dest_files=["res://.godot/imported/sheep_walk.png-33e98e482f80da54c9c92c51f012aa74.ctex"]
+source_file="res://run_twrd.png"
+dest_files=["res://.godot/imported/run_twrd.png-e270dd8606196fbb9ed07d23d7c3d5cc.ctex"]
 
 [params]
 
