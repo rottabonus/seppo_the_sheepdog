@@ -11,6 +11,13 @@ priority = 2
 script = ExtResource("1_cewdk")
 goal = 5.0
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(5.03466, 3.35883)
+color = Color(0.711955, 0.872546, 0.339793, 1)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(101.25, 67.5)
 shape = SubResource("RectangleShape2D_ouuop")

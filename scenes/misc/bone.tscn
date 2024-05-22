@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scenes/misc/bone.gd" id="1_s5vpy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qx61u"]
-radius = 2.0
-height = 8.0
+radius = 3.0
+height = 10.0
 
 [node name="Bone" type="Area2D"]
 position = Vector2(-50, -21)
@@ -15,9 +15,12 @@ script = ExtResource("1_s5vpy")
 position = Vector2(0, -9.53674e-07)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_qx61u")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -9.53674e-07)
 rotation = 1.5708
 scale = Vector2(0.3, 0.413)
 texture = ExtResource("1_a3q4n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

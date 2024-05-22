@@ -20,7 +20,7 @@ if Globals.has_player_talked_to_master == true:
 	Master: What are you doing, Seppo? Go herd them sheeps!
 	=> END
 else:
-	Master: [[Hi|Hello|Howdy]], Seppo.
+	Master: Seppo!
 	Master: Go herd some sheep!
 	- Woof
 	- Bark

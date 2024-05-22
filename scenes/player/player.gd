@@ -44,3 +44,12 @@ func _process(delta):
 
 func _on_bark_timer_timeout():
 	$BarkInfluence/CollisionShape2D.set_disabled(true)
+	
+	
+func ending_thoughts():
+	$Camera2D.zoom.x += 1.5
+	$Camera2D.zoom.y += 1.5
+	velocity = Vector2()
+	speed = 0
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/final_thoughts.dialogue"), "start")
+	

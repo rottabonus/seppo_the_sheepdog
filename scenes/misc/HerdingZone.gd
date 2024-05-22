@@ -13,6 +13,7 @@ func _process(_delta):
 func start_herding():
 	$CollisionShape2D.set_disabled(false)
 	$HerdingTimer.start()
+	$ColorRect.set_visible(true)
 
 func _on_body_entered(body):
 	if body.has_method("on_goal_entered"):

@@ -239,6 +239,6 @@ disabled = true
 
 [node name="BarkTimer" type="Timer" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
 
 [connection signal="timeout" from="BarkTimer" to="." method="_on_bark_timer_timeout"]

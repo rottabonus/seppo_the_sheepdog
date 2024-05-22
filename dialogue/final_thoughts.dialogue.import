@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cgmou15irvngp"
+path="res://.godot/imported/final_thoughts.dialogue-ae76b381f116429719384442d6e15680.tres"
+
+[deps]
+
+source_file="res://dialogue/final_thoughts.dialogue"
+dest_files=["res://.godot/imported/final_thoughts.dialogue-ae76b381f116429719384442d6e15680.tres"]
+
+[params]
+
+defaults=true

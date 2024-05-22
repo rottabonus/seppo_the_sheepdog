@@ -297,5 +297,5 @@ shape = SubResource("CircleShape2D_u5yt1")
 debug_color = Color(0.575128, 0.537749, 0.378893, 0.42)
 
 [node name="Bone" parent="." instance=ExtResource("8_t5mih")]
-z_index = 1
+z_index = -1
 position = Vector2(-3, 3)

@@ -72,3 +72,14 @@ offset_top = 338.0
 offset_right = 856.0
 offset_bottom = 453.0
 texture = ExtResource("2_safr2")
+
+[node name="MasterCallTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="CallLoop" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="MasterCallTimer" to="." method="_on_master_call_timer_timeout"]
+[connection signal="timeout" from="CallLoop" to="." method="_on_call_loop_timeout"]
