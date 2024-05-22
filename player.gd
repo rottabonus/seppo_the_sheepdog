@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
 @export var speed = 400
-var screen_size
 signal BarkMovement
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	pass
 
 func _process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

@@ -1,22 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmt4hdxamxuqo"]
+[gd_scene load_steps=7 format=3 uid="uid://bmt4hdxamxuqo"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l7bfh"]
 [ext_resource type="PackedScene" uid="uid://h7jba8nvsxed" path="res://sheep.tscn" id="2_7ibej"]
+[ext_resource type="Texture2D" uid="uid://byxyu54kbx5oj" path="res://background2.png" id="2_safr2"]
 [ext_resource type="PackedScene" uid="uid://bor04e6fwvy54" path="res://player.tscn" id="3_xidrt"]
 [ext_resource type="PackedScene" uid="uid://ddxqu8jb34qkf" path="res://fence_tilemap.tscn" id="4_rq03n"]
+[ext_resource type="PackedScene" uid="uid://byna2mjx2aih3" path="res://herding_zone.tscn" id="6_ejh20"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_l7bfh")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+[node name="Ground" type="CanvasLayer" parent="."]
+layer = -2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="Grass" type="ColorRect" parent="Ground"]
 offset_top = 2.0
 offset_right = 640.0
 offset_bottom = 360.0
-color = Color(0.297795, 0.423024, 0.244177, 1)
+color = Color(0.492159, 0.535593, 0.324513, 1)
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_left = -173.0
+offset_top = -120.0
+offset_right = 847.0
+offset_bottom = -5.0
+texture = ExtResource("2_safr2")
+
+[node name="HerdingZone" parent="." instance=ExtResource("6_ejh20")]
+position = Vector2(403, 146)
 
 [node name="Player" parent="." instance=ExtResource("3_xidrt")]
 y_sort_enabled = true

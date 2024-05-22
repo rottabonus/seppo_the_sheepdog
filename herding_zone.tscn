@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://byna2mjx2aih3"]
+
+[ext_resource type="Script" path="res://HerdingZone.gd" id="1_cewdk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouuop"]
+size = Vector2(127.5, 92)
+
+[node name="HerdingZone" type="Area2D"]
+monitorable = false
+priority = 2
+script = ExtResource("1_cewdk")
+goal = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64.25, 46)
+shape = SubResource("RectangleShape2D_ouuop")
+debug_color = Color(1.20327e-06, 0.796098, 0.419452, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

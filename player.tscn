@@ -220,10 +220,10 @@ speed = 200
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1ohxt")
 animation = &"run_back"
-frame_progress = 0.765024
+frame_progress = 0.00791757
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 9)
+position = Vector2(0, 9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_m3q6g")
 
@@ -233,7 +233,6 @@ stream = ExtResource("5_3jcr5")
 [node name="BarkInfluence" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarkInfluence"]
-position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_207c1")
 disabled = true
 

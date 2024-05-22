@@ -27,6 +27,8 @@ func _physics_process(delta):
 func move_from_bark():
 	$StateMachine.change_state("SheepBarkMove")
 
+func on_goal_entered():
+	print("i was herded!")
 
 func _on_sheep_collision_area_body_entered(body):
 	if body.name == "Player":
