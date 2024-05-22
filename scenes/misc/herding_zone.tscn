@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byna2mjx2aih3"]
 
-[ext_resource type="Script" path="res://scenes/misc/HerdingZone.gd" id="1_wdl0p"]
+[ext_resource type="Script" path="res://scenes/misc/HerdingZone.gd" id="1_cewdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouuop"]
 size = Vector2(127.5, 92)
@@ -8,7 +8,7 @@ size = Vector2(127.5, 92)
 [node name="HerdingZone" type="Area2D"]
 monitorable = false
 priority = 2
-script = ExtResource("1_wdl0p")
+script = ExtResource("1_cewdk")
 goal = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

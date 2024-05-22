@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://f50uyppb6ga6" path="res://img/idle.png" id="2_kej0n"]
 [ext_resource type="Texture2D" uid="uid://icc1mjh35kpy" path="res://img/front_walk.png" id="3_qkwxi"]
 [ext_resource type="Texture2D" uid="uid://btc1pplvx2hja" path="res://img/side_walk.png" id="5_mv3yw"]
+[ext_resource type="PackedScene" uid="uid://dndcajd3hrgp4" path="res://scenes/misc/StateMachine.tscn" id="6_he6ar"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_walk.gd" id="7_enqrc"]
-[ext_resource type="Script" path="res://scenes/sheep/sheep_state_factory.gd" id="7_vondy"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_idle.gd" id="9_7er7s"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_barkmove.gd" id="10_snxhm"]
 
@@ -221,8 +221,15 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cdko4")
 debug_color = Color(0.355147, 0.58006, 0.597915, 0.42)
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("7_vondy")
+[node name="SheepCollisionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SheepCollisionArea"]
+position = Vector2(-1, 9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nv3dx")
+debug_color = Color(0.919127, 0.582557, 0.830364, 0.42)
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("6_he6ar")]
 initial_state = NodePath("SheepIdle")
 
 [node name="SheepWalk" type="Node2D" parent="StateMachine" node_paths=PackedStringArray("sheep")]
@@ -235,14 +242,6 @@ script = ExtResource("9_7er7s")
 [node name="SheepBarkMove" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
 script = ExtResource("10_snxhm")
 sheep = NodePath("../..")
-
-[node name="SheepCollisionArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SheepCollisionArea"]
-position = Vector2(-1, 9)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_nv3dx")
-debug_color = Color(0.919127, 0.582557, 0.830364, 0.42)
 
 [connection signal="body_entered" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_entered"]
 [connection signal="body_exited" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_exited"]

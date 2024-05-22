@@ -231,13 +231,13 @@ shape = SubResource("CapsuleShape2D_m3q6g")
 stream = ExtResource("5_3jcr5")
 
 [node name="BarkInfluence" type="Area2D" parent="."]
+collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarkInfluence"]
 shape = SubResource("CircleShape2D_207c1")
 disabled = true
 
 [node name="BarkTimer" type="Timer" parent="."]
-wait_time = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

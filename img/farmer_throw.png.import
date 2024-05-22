@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r0c3ev3vjeqm"
-path="res://.godot/imported/icon.png-785c773011bc951c4eb2a222382599fb.ctex"
+uid="uid://bbat8hbqjweeg"
+path="res://.godot/imported/farmer_throw.png-0be5516b501575c8c60669fd6a7361f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/icon.png"
-dest_files=["res://.godot/imported/icon.png-785c773011bc951c4eb2a222382599fb.ctex"]
+source_file="res://img/farmer_throw.png"
+dest_files=["res://.godot/imported/farmer_throw.png-0be5516b501575c8c60669fd6a7361f4.ctex"]
 
 [params]
 
