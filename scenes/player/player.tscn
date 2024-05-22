@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=3 uid="uid://bor04e6fwvy54"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_q0ssl"]
-[ext_resource type="Texture2D" uid="uid://d2mr2tam4vt4i" path="res://dog_idle.png" id="2_uxks8"]
-[ext_resource type="Texture2D" uid="uid://bp6inde10btbj" path="res://dog_run.png" id="3_0ype1"]
-[ext_resource type="Texture2D" uid="uid://blb0bibvwq32b" path="res://run_back.png" id="4_84svt"]
-[ext_resource type="Texture2D" uid="uid://fcgbrpip4qqp" path="res://run_twrd.png" id="4_wybxf"]
-[ext_resource type="AudioStream" uid="uid://bhd8esv2esafs" path="res://hau.wav" id="5_3jcr5"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_q0ssl"]
+[ext_resource type="Texture2D" uid="uid://d2mr2tam4vt4i" path="res://img/dog_idle.png" id="2_uxks8"]
+[ext_resource type="Texture2D" uid="uid://bp6inde10btbj" path="res://img/dog_run.png" id="3_0ype1"]
+[ext_resource type="Texture2D" uid="uid://blb0bibvwq32b" path="res://img/run_back.png" id="4_84svt"]
+[ext_resource type="Texture2D" uid="uid://fcgbrpip4qqp" path="res://img/run_twrd.png" id="4_wybxf"]
+[ext_resource type="AudioStream" uid="uid://bhd8esv2esafs" path="res://sound/hau.wav" id="5_3jcr5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yroi6"]
 atlas = ExtResource("2_uxks8")

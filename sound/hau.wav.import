@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhd8esv2esafs"
-path="res://.godot/imported/hau.wav-22305e055390013994973e2583a2590c.sample"
+path="res://.godot/imported/hau.wav-fff7210f0790f104aa1f2539922c519b.sample"
 
 [deps]
 
-source_file="res://hau.wav"
-dest_files=["res://.godot/imported/hau.wav-22305e055390013994973e2583a2590c.sample"]
+source_file="res://sound/hau.wav"
+dest_files=["res://.godot/imported/hau.wav-fff7210f0790f104aa1f2539922c519b.sample"]
 
 [params]
 

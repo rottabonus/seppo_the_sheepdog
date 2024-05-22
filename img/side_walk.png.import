@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxyu54kbx5oj"
-path="res://.godot/imported/background2.png-f31d5d1d201be48ff8d6f3f822c6d3f0.ctex"
+uid="uid://btc1pplvx2hja"
+path="res://.godot/imported/side_walk.png-2aaffacdba32fba8067700aa1d05b9f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background2.png"
-dest_files=["res://.godot/imported/background2.png-f31d5d1d201be48ff8d6f3f822c6d3f0.ctex"]
+source_file="res://img/side_walk.png"
+dest_files=["res://.godot/imported/side_walk.png-2aaffacdba32fba8067700aa1d05b9f0.ctex"]
 
 [params]
 

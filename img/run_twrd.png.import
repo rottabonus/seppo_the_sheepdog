@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp6inde10btbj"
-path="res://.godot/imported/dog_run.png-63599e4c27a0b59668913871ce69ce95.ctex"
+uid="uid://fcgbrpip4qqp"
+path="res://.godot/imported/run_twrd.png-3db1e31689fb9453be495dcf967c64f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dog_run.png"
-dest_files=["res://.godot/imported/dog_run.png-63599e4c27a0b59668913871ce69ce95.ctex"]
+source_file="res://img/run_twrd.png"
+dest_files=["res://.godot/imported/run_twrd.png-3db1e31689fb9453be495dcf967c64f6.ctex"]
 
 [params]
 

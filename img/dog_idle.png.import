@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fcgbrpip4qqp"
-path="res://.godot/imported/run_twrd.png-e270dd8606196fbb9ed07d23d7c3d5cc.ctex"
+uid="uid://d2mr2tam4vt4i"
+path="res://.godot/imported/dog_idle.png-66035b1e007c80504fd20cb7a5f54317.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://run_twrd.png"
-dest_files=["res://.godot/imported/run_twrd.png-e270dd8606196fbb9ed07d23d7c3d5cc.ctex"]
+source_file="res://img/dog_idle.png"
+dest_files=["res://.godot/imported/dog_idle.png-66035b1e007c80504fd20cb7a5f54317.ctex"]
 
 [params]
 
