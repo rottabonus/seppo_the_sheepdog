@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/misc/HerdingZone.gd" id="1_cewdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouuop"]
-size = Vector2(127.5, 92)
+size = Vector2(201.5, 135)
 
 [node name="HerdingZone" type="Area2D"]
 monitorable = false
@@ -12,9 +12,15 @@ script = ExtResource("1_cewdk")
 goal = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(64.25, 46)
+position = Vector2(101.25, 67.5)
 shape = SubResource("RectangleShape2D_ouuop")
+disabled = true
 debug_color = Color(1.20327e-06, 0.796098, 0.419452, 0.42)
+
+[node name="HerdingTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="HerdingTimer" to="." method="_on_herding_timer_timeout"]

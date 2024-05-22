@@ -1,0 +1,29 @@
+~ start
+do get_tree().get_first_node_in_group("Master").play("talk")
+
+if Globals.herding_time == 60:
+	Master: I thought you were a good boy!
+	Master: Instead it appears you are a SLOW boy!
+	=> END
+
+if Globals.are_sheep_herded == true:
+	Master: Who is a good boy?
+	do get_tree().get_first_node_in_group("Master").play("thumb_up")
+	Master: You herded the sheep in {{Globals.herding_time}} seconds!
+	Master: Look what I got here for you!
+	do get_tree().get_first_node_in_group("Master").play("throw")
+	=> END
+	
+if Globals.has_player_talked_to_master == true:
+	Master: What are you doing, Seppo? Go herd them sheeps!
+	=> END
+else:
+	Master: [[Hi|Hello|Howdy]], Seppo.
+	Master: Go herd some sheep!
+	- Woof
+	- Bark
+
+Master: Well go on then!
+set Globals.has_player_talked_to_master = true
+do get_tree().get_first_node_in_group("HerdingZone").start_herding()
+=> END

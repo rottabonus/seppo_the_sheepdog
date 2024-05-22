@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var goal: float
+@export var herding_max = 60
 var current: float
 
 func _ready():
@@ -8,18 +9,26 @@ func _ready():
 
 func _process(_delta):
 	pass
+	
+func start_herding():
+	$CollisionShape2D.set_disabled(false)
+	$HerdingTimer.start()
 
 func _on_body_entered(body):
 	if body.has_method("on_goal_entered"):
 		body.on_goal_entered()
-		print("yippikayjee")
 		current += 1
 		
 		if current == goal:
-			print("win game should happen!")
-
+			Globals.are_sheep_herded = true
+			$CollisionShape2D.set_disabled(true)
+			Globals.herding_time = herding_max - $HerdingTimer.get_time_left()
+			$HerdingTimer.stop()
 
 func _on_body_exited(body):
 	if body.has_method("on_goal_entered"):
-		print("sheep left the area")
 		current -= 1
+
+
+func _on_herding_timer_timeout():
+	Globals.herding_time = 60

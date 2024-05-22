@@ -12,7 +12,6 @@ func _physics_process(delta):
 		velocity = move_direction * speed * delta
 	
 	move_and_collide(velocity * delta)
-	
 	if velocity.length() > 0:		
 		if velocity.y < 0:
 			$AnimatedSprite2D.play("back_walk")

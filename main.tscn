@@ -32,7 +32,7 @@ offset_right = 847.0
 offset_bottom = -5.0
 texture = ExtResource("2_safr2")
 
-[node name="HerdingZone" parent="." instance=ExtResource("6_ejh20")]
+[node name="HerdingZone" parent="." groups=["HerdingZone"] instance=ExtResource("6_ejh20")]
 position = Vector2(403, 146)
 
 [node name="Player" parent="." instance=ExtResource("3_xidrt")]
