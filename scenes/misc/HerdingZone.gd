@@ -21,7 +21,6 @@ func _on_body_entered(body):
 		
 		if current == goal:
 			Globals.are_sheep_herded = true
-			$CollisionShape2D.set_disabled(true)
 			Globals.herding_time = herding_max - $HerdingTimer.get_time_left()
 			$HerdingTimer.stop()
 

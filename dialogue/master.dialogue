@@ -2,6 +2,7 @@
 do get_tree().get_first_node_in_group("Master").play("talk")
 
 if Globals.herding_time == 60:
+	do get_tree().get_first_node_in_group("Master").play("shrug")
 	Master: I thought you were a good boy!
 	Master: Instead it appears you are a SLOW boy!
 	=> END
@@ -15,6 +16,7 @@ if Globals.are_sheep_herded == true:
 	=> END
 	
 if Globals.has_player_talked_to_master == true:
+	do get_tree().get_first_node_in_group("Master").play("shrug")
 	Master: What are you doing, Seppo? Go herd them sheeps!
 	=> END
 else:

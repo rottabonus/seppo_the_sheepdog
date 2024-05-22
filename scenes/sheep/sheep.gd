@@ -12,6 +12,7 @@ func _physics_process(delta):
 		velocity = move_direction * speed * delta
 	
 	move_and_collide(velocity * delta)
+	
 	if velocity.length() > 0:		
 		if velocity.y < 0:
 			$AnimatedSprite2D.play("back_walk")
@@ -28,6 +29,7 @@ func move_from_bark():
 
 func on_goal_entered():
 	print("i was herded!")
+	# play a cool sound to make player happy
 
 func _on_sheep_collision_area_body_entered(body):
 	if body.name == "Player":
