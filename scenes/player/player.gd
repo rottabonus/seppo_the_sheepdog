@@ -12,14 +12,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 	
 	if Input.is_action_pressed("bark"):
 		$AudioStreamPlayer.play()
-		$BarkInfluence/CollisionShape2D.set_disabled(false)
-		$BarkTimer.start()
-		
-		var bodies = $BarkInfluence.get_overlapping_bodies()
-		for body in bodies:
-			if body.has_method("move_from_bark"):
-				body.move_from_bark()
-				
+
 		var areas = $BarkInfluence.get_overlapping_areas()
 		for area in areas:
 			if area.has_method("action"):
@@ -40,10 +33,12 @@ func _process(delta):
 			$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.play("idle")
-
-
-func _on_bark_timer_timeout():
-	$BarkInfluence/CollisionShape2D.set_disabled(true)
+		
+				
+	var bodies = $BarkInfluence.get_overlapping_bodies()
+	for body in bodies:
+		if body.has_method("move_from_bark"):
+			body.move_from_bark()
 	
 	
 func ending_thoughts():

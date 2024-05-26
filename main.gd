@@ -2,15 +2,15 @@ extends Node2D
 
 var master_caller: AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	$AudioStreamPlayer.play()
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
-	master_caller = AudioStreamPlayer.new()
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if Globals.has_player_talked_to_master == true:
-		master_caller.stop()
+#func _ready():
+	#$AudioStreamPlayer.play()
+	#DialogueManager.show_example_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
+	#master_caller = AudioStreamPlayer.new()
+	#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(_delta):
+	#if Globals.has_player_talked_to_master == true:
+		#master_caller.stop()
 
 #func call_seppo():
 	#var audio_stream_array = [load("res://sound/seppo1.wav"), load("res://sound/seppo2.wav"), load("res://sound/seppo3.wav")]

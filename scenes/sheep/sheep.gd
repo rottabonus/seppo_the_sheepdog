@@ -33,7 +33,7 @@ func on_goal_entered():
 
 func _on_sheep_collision_area_body_entered(body):
 	if body.name == "Player":
-		move_direction = (global_position - body.global_position) / 2
+		$StateMachine.change_state("SheepBarkMove")
 
 func _on_sheep_collision_area_body_exited(body):
 	if body.name == "Player":

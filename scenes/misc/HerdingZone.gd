@@ -31,4 +31,5 @@ func _on_body_exited(body):
 
 
 func _on_herding_timer_timeout():
+	print("ended")
 	Globals.herding_time = 60
