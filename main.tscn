@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmt4hdxamxuqo"]
+[gd_scene load_steps=9 format=3 uid="uid://bmt4hdxamxuqo"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l7bfh"]
 [ext_resource type="PackedScene" uid="uid://h7jba8nvsxed" path="res://scenes/sheep/sheep.tscn" id="2_7ibej"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ddxqu8jb34qkf" path="res://scenes/misc/fence_tilemap.tscn" id="4_rq03n"]
 [ext_resource type="PackedScene" uid="uid://byna2mjx2aih3" path="res://scenes/misc/herding_zone.tscn" id="6_ejh20"]
 [ext_resource type="PackedScene" uid="uid://dqdul2urs16s4" path="res://scenes/master/master.tscn" id="7_5c1k4"]
+[ext_resource type="AudioStream" uid="uid://bet7kpqn4v1qk" path="res://sound/SeppoDub.wav" id="8_mxg0j"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -81,5 +82,9 @@ autostart = true
 [node name="CallLoop" type="Timer" parent="."]
 wait_time = 5.0
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_mxg0j")
+
 [connection signal="timeout" from="MasterCallTimer" to="." method="_on_master_call_timer_timeout"]
 [connection signal="timeout" from="CallLoop" to="." method="_on_call_loop_timeout"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
