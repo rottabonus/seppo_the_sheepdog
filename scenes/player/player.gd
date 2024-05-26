@@ -17,6 +17,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		for area in areas:
 			if area.has_method("action"):
 				area.action()
+				velocity = Vector2.ZERO
 	
 func _process(delta):
 	velocity = direction * speed
@@ -37,8 +38,8 @@ func _process(delta):
 				
 	var bodies = $BarkInfluence.get_overlapping_bodies()
 	for body in bodies:
-		if body.has_method("move_from_bark"):
-			body.move_from_bark()
+		if body.has_method("get_herded"):
+			body.get_herded()
 	
 	
 func ending_thoughts():

@@ -1,5 +1,5 @@
 extends State
-class_name SheepBarkMove
+class_name SheepGetHerded
 
 @export var sheep: CharacterBody2D
 @export var move_speed: = 80.0
@@ -14,10 +14,6 @@ func calculate_direction():
 		move_direction = Vector2()
 		if player:
 			move_direction = sheep.global_position - player.global_position
-			#print("sheep.global_position: ", sheep.global_position)
-			#print("sheep.position: ", sheep.position)
-			#print("player.global_position: ", player.global_position)
-			#print("player.position: ", player.position)
 			
 func enter():
 	calculate_direction()

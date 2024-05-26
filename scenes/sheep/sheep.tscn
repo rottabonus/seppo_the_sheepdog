@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dndcajd3hrgp4" path="res://scenes/misc/StateMachine.tscn" id="6_he6ar"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_walk.gd" id="7_enqrc"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_idle.gd" id="9_7er7s"]
-[ext_resource type="Script" path="res://scenes/sheep/sheep_barkmove.gd" id="10_snxhm"]
+[ext_resource type="Script" path="res://scenes/sheep/sheep_get_herded.gd" id="9_38dx1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqxb3"]
 atlas = ExtResource("2_40vdm")
@@ -239,8 +239,8 @@ sheep = NodePath("../..")
 [node name="SheepIdle" type="Node" parent="StateMachine"]
 script = ExtResource("9_7er7s")
 
-[node name="SheepBarkMove" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
-script = ExtResource("10_snxhm")
+[node name="SheepGetHerded" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
+script = ExtResource("9_38dx1")
 sheep = NodePath("../..")
 
 [connection signal="body_entered" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_entered"]
