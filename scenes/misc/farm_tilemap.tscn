@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddxqu8jb34qkf"]
+[gd_scene load_steps=6 format=3 uid="uid://ddxqu8jb34qkf"]
 
 [ext_resource type="Texture2D" uid="uid://1k7c7w4ndih7" path="res://img/fence_tilemap.png" id="1_ksof2"]
+[ext_resource type="Texture2D" uid="uid://7st67f63kagr" path="res://img/sprite_hay.png" id="2_2xxid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eu6fu"]
 texture = ExtResource("1_ksof2")
@@ -205,6 +206,41 @@ texture = ExtResource("1_ksof2")
 5:3/0/physics_layer_2/angular_velocity = 0.0
 5:3/0/physics_layer_2/polygon_0/points = PackedVector2Array(-8, -8, -2.875, -8, -3.125, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tt8q4"]
+texture = ExtResource("2_2xxid")
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_1/angular_velocity = 0.0
+0:0/0/physics_layer_2/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_2/angular_velocity = 0.0
+0:3/size_in_atlas = Vector2i(3, 3)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_1/angular_velocity = 0.0
+0:3/0/physics_layer_2/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_2/angular_velocity = 0.0
+0:6/size_in_atlas = Vector2i(3, 3)
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+0:6/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_1/angular_velocity = 0.0
+0:6/0/physics_layer_2/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_2/angular_velocity = 0.0
+0:9/size_in_atlas = Vector2i(3, 3)
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+0:9/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_1/angular_velocity = 0.0
+0:9/0/physics_layer_2/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_2/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_ujj1d"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
@@ -212,8 +248,9 @@ physics_layer_1/collision_layer = 1
 physics_layer_1/collision_mask = 0
 physics_layer_2/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eu6fu")
+sources/3 = SubResource("TileSetAtlasSource_tt8q4")
 
-[node name="FenceTileMap" type="TileMap"]
+[node name="FarmTileMap" type="TileMap"]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_ujj1d")
 format = 2
