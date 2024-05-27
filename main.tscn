@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmt4hdxamxuqo"]
+[gd_scene load_steps=14 format=3 uid="uid://bmt4hdxamxuqo"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l7bfh"]
 [ext_resource type="Texture2D" uid="uid://bv5tpjy6v1e2v" path="res://img/barn.png" id="2_7i3mb"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://dqdul2urs16s4" path="res://scenes/master/master.tscn" id="7_5c1k4"]
 [ext_resource type="AudioStream" uid="uid://bet7kpqn4v1qk" path="res://sound/SeppoDub.wav" id="8_mxg0j"]
 [ext_resource type="PackedScene" uid="uid://ch12vtv75ur8d" path="res://scenes/misc/hud.tscn" id="10_xpaxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2s0x"]
+size = Vector2(25, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pww50"]
+size = Vector2(671.5, 20)
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -108,6 +114,26 @@ wait_time = 5.0
 stream = ExtResource("8_mxg0j")
 
 [node name="HUD" parent="." instance=ExtResource("10_xpaxw")]
+
+[node name="SheepNoGoZone" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Left" type="CollisionShape2D" parent="SheepNoGoZone"]
+position = Vector2(-60.5, 203)
+shape = SubResource("RectangleShape2D_a2s0x")
+
+[node name="Right" type="CollisionShape2D" parent="SheepNoGoZone"]
+position = Vector2(639, 202)
+shape = SubResource("RectangleShape2D_a2s0x")
+
+[node name="Top" type="CollisionShape2D" parent="SheepNoGoZone"]
+position = Vector2(289, 14)
+shape = SubResource("RectangleShape2D_pww50")
+
+[node name="Bottom" type="CollisionShape2D" parent="SheepNoGoZone"]
+position = Vector2(290.25, 394)
+shape = SubResource("RectangleShape2D_pww50")
 
 [connection signal="timeout" from="MasterCallTimer" to="." method="_on_master_call_timer_timeout"]
 [connection signal="timeout" from="CallLoop" to="." method="_on_call_loop_timeout"]

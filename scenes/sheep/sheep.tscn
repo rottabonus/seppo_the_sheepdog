@@ -209,6 +209,7 @@ radius = 8.0
 
 [node name="Sheep" type="CharacterBody2D" groups=["Sheep"]]
 disable_mode = 1
+collision_mask = 5
 script = ExtResource("1_gjao2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
