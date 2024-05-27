@@ -17,11 +17,14 @@ if Globals.herding_state.are_sheep_herded == true:
 	
 if Globals.has_player_talked_to_master == true:
 	do get_tree().get_first_node_in_group("Master").play("shrug")
-	Master: What are you doing, Seppo? Go herd them sheeps!
+	if Globals.herding_state.is_first_zone_herded == true:
+		Master: Now herd them sheeps to the field on the left side!
+	else:
+		Master: You have to herd the sheeps to the field on the right side, then to the left side! Remember that all of the sheeps must be on the field at the same time!
 	=> END
 else:
 	Master: Seppo!
-	Master: Go herd some sheep!
+	Master: Go herd some sheep! You have to herd the sheeps first to the field on the right side and then to the left side. All of the sheeps must be on the field at the same time.
 	- Woof
 	- Bark
 

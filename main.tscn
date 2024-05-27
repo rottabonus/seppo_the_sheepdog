@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmt4hdxamxuqo"]
+[gd_scene load_steps=12 format=3 uid="uid://bmt4hdxamxuqo"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l7bfh"]
+[ext_resource type="Texture2D" uid="uid://bv5tpjy6v1e2v" path="res://img/barn.png" id="2_7i3mb"]
 [ext_resource type="PackedScene" uid="uid://h7jba8nvsxed" path="res://scenes/sheep/sheep.tscn" id="2_7ibej"]
 [ext_resource type="Texture2D" uid="uid://byxyu54kbx5oj" path="res://img/background2.png" id="2_safr2"]
 [ext_resource type="PackedScene" uid="uid://bor04e6fwvy54" path="res://scenes/player/player.tscn" id="3_xidrt"]
+[ext_resource type="Texture2D" uid="uid://hk2u60u77e4e" path="res://img/tractor_1.png" id="4_fnv6r"]
 [ext_resource type="PackedScene" uid="uid://ddxqu8jb34qkf" path="res://scenes/misc/fence_tilemap.tscn" id="4_rq03n"]
 [ext_resource type="PackedScene" uid="uid://byna2mjx2aih3" path="res://scenes/misc/herding_zone.tscn" id="6_ejh20"]
 [ext_resource type="PackedScene" uid="uid://dqdul2urs16s4" path="res://scenes/master/master.tscn" id="7_5c1k4"]
@@ -28,15 +30,30 @@ color = Color(0.492159, 0.535593, 0.324513, 1)
 layer = -1
 follow_viewport_enabled = true
 
-[node name="TextureRect" type="TextureRect" parent="Background"]
+[node name="Barn" type="TextureRect" parent="Background"]
+offset_left = 698.0
+offset_top = -10.0
+offset_right = 936.0
+offset_bottom = 196.0
+texture = ExtResource("2_7i3mb")
+
+[node name="Birches" type="TextureRect" parent="Background"]
 offset_left = -242.0
 offset_top = -117.0
 offset_right = 778.0
 offset_bottom = -2.0
 texture = ExtResource("2_safr2")
 
+[node name="Tractor" type="TextureRect" parent="Background"]
+offset_left = -214.0
+offset_top = 312.0
+offset_right = -93.0
+offset_bottom = 387.0
+texture = ExtResource("4_fnv6r")
+flip_h = true
+
 [node name="HerdingZone" parent="." groups=["HerdingZone"] instance=ExtResource("6_ejh20")]
-position = Vector2(403, 146)
+position = Vector2(379, 140)
 goal = 5
 herding_max = 45
 
@@ -87,11 +104,11 @@ autostart = true
 [node name="CallLoop" type="Timer" parent="."]
 wait_time = 5.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_mxg0j")
 
 [node name="HUD" parent="." instance=ExtResource("10_xpaxw")]
 
 [connection signal="timeout" from="MasterCallTimer" to="." method="_on_master_call_timer_timeout"]
 [connection signal="timeout" from="CallLoop" to="." method="_on_call_loop_timeout"]
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="MainMusic" to="." method="_on_audio_stream_player_finished"]
