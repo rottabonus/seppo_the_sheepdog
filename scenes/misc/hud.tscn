@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch12vtv75ur8d"]
+
+[ext_resource type="Script" path="res://scenes/misc/herding_timer.gd" id="1_2dwo0"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="HerdingTimer" type="Label" parent="."]
+visible = false
+offset_left = 264.0
+offset_top = 2.0
+offset_right = 309.0
+offset_bottom = 25.0
+text = "Timer"
+script = ExtResource("1_2dwo0")

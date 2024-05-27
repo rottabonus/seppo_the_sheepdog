@@ -1,13 +1,13 @@
 ~ start
 do get_tree().get_first_node_in_group("Master").play("talk")
 
-if Globals.herding_time == 60:
+if Globals.herding_state.herding_time == 45:
 	do get_tree().get_first_node_in_group("Master").play("shrug")
 	Master: I thought you were a good boy!
 	Master: Instead it appears you are a SLOW boy!
 	=> END
 
-if Globals.are_sheep_herded == true:
+if Globals.herding_state.are_sheep_herded == true:
 	Master: Who is a good boy?
 	do get_tree().get_first_node_in_group("Master").play("thumb_up")
 	Master: You herded the sheep in {{Globals.herding_time}} seconds!
