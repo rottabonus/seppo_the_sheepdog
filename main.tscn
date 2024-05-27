@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://h7jba8nvsxed" path="res://scenes/sheep/sheep.tscn" id="2_7ibej"]
 [ext_resource type="Texture2D" uid="uid://byxyu54kbx5oj" path="res://img/background2.png" id="2_safr2"]
 [ext_resource type="PackedScene" uid="uid://bor04e6fwvy54" path="res://scenes/player/player.tscn" id="3_xidrt"]
-[ext_resource type="Texture2D" uid="uid://hk2u60u77e4e" path="res://img/tractor_1.png" id="4_fnv6r"]
 [ext_resource type="PackedScene" uid="uid://ddxqu8jb34qkf" path="res://scenes/misc/fence_tilemap.tscn" id="4_rq03n"]
+[ext_resource type="Texture2D" uid="uid://fdjfo1y4nkp2" path="res://img/tractor_2.png" id="4_tv2n0"]
 [ext_resource type="PackedScene" uid="uid://byna2mjx2aih3" path="res://scenes/misc/herding_zone.tscn" id="6_ejh20"]
 [ext_resource type="PackedScene" uid="uid://dqdul2urs16s4" path="res://scenes/master/master.tscn" id="7_5c1k4"]
 [ext_resource type="AudioStream" uid="uid://bet7kpqn4v1qk" path="res://sound/SeppoDub.wav" id="8_mxg0j"]
@@ -55,7 +55,7 @@ offset_left = -214.0
 offset_top = 312.0
 offset_right = -93.0
 offset_bottom = 387.0
-texture = ExtResource("4_fnv6r")
+texture = ExtResource("4_tv2n0")
 flip_h = true
 
 [node name="HerdingZone" parent="." groups=["HerdingZone"] instance=ExtResource("6_ejh20")]
