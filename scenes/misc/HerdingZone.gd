@@ -1,3 +1,4 @@
+
 extends Area2D
 
 @export var goal: float
