@@ -10,7 +10,7 @@ if Globals.herding_state.herding_time == 45:
 if Globals.herding_state.are_sheep_herded == true:
 	Master: Who is a good boy?
 	do get_tree().get_first_node_in_group("Master").play("thumb_up")
-	Master: You herded the sheep in {{Globals.herding_time}} seconds!
+	Master: You herded the sheep in {{Globals.herding_state.herding_time}} seconds!
 	Master: Look what I got here for you!
 	do get_tree().get_first_node_in_group("Master").play("throw")
 	=> END
