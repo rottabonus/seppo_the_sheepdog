@@ -114,10 +114,6 @@ texture = ExtResource("2_safr2")
 wait_time = 20.0
 autostart = true
 
-[node name="MainMusic" type="AudioStreamPlayer" parent="SheepFarm"]
-process_mode = 3
-stream = ExtResource("8_mxg0j")
-
 [node name="HUD" parent="SheepFarm" instance=ExtResource("10_xpaxw")]
 
 [node name="SheepNoGoZone" type="StaticBody2D" parent="SheepFarm"]
@@ -142,6 +138,10 @@ shape = SubResource("RectangleShape2D_pww50")
 
 [node name="PauseMenu" parent="SheepFarm" instance=ExtResource("12_cq8wb")]
 
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("8_mxg0j")
+
 [connection signal="is_paused" from="." to="SheepFarm/PauseMenu" method="_on_main_is_paused"]
 [connection signal="timeout" from="SheepFarm/CallLoop" to="SheepFarm" method="_on_call_loop_timeout"]
-[connection signal="finished" from="SheepFarm/MainMusic" to="SheepFarm" method="_on_main_music_finished"]
+[connection signal="finished" from="MainMusic" to="SheepFarm" method="_on_main_music_finished"]

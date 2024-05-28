@@ -1,8 +1,4 @@
 extends Node2D
-
-func _ready():
-	$MainMusic.play()
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
 	
 	
 func call_seppo():
