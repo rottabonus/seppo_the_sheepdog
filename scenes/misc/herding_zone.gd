@@ -3,6 +3,7 @@ extends Area2D
 
 @export var goal: int
 @export var herding_max: int
+@onready var master = get_tree().get_first_node_in_group("Master")
 var current: int
 
 func _ready():
@@ -22,19 +23,18 @@ func _on_body_entered(body):
 	if body.has_method("on_goal_entered"):
 		body.on_goal_entered()
 		current += 1
-		print("current", current)
 		
 		if current == goal and not Globals.herding_state.is_first_zone_herded:
 			$Zone2.set_deferred('disabled', false)
 			$Zone1.set_deferred('disabled', true)
 			Globals.herding_state.is_first_zone_herded = true 
-			print("todo: Add a shout audio to indicate player that they can move forward")
+			master.shout("half_done")
 		elif current == goal:
-			print("second stage done")
 			$Zone2.set_deferred('disabled', true)
 			Globals.herding_state.are_sheep_herded = true 
 			Globals.herding_state.herding_time = to_decimal(herding_max - $HerdingTimer.get_time_left(), 2)
 			$HerdingTimer.stop()
+			master.shout("all_done")
 
 func _on_body_exited(body):
 	if body.has_method("on_goal_entered"):
@@ -42,5 +42,4 @@ func _on_body_exited(body):
 
 
 func _on_herding_timer_timeout():
-	print("ended")
 	Globals.herding_state.herding_time = herding_max

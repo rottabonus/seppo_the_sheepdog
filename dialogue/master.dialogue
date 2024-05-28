@@ -10,6 +10,7 @@ if Globals.herding_state.herding_time == 45:
 if Globals.herding_state.are_sheep_herded == true:
 	Master: Who is a good boy?
 	do get_tree().get_first_node_in_group("Master").play("thumb_up")
+	do get_tree().get_first_node_in_group("GoodBoyShouter").play()
 	Master: You herded the sheep in {{Globals.herding_state.herding_time}} seconds!
 	Master: Look what I got here for you!
 	do get_tree().get_first_node_in_group("Master").play("throw")
@@ -23,6 +24,7 @@ if Globals.has_player_talked_to_master == true:
 		Master: You have to herd the sheeps to the field on the right side, then to the left side! Remember that all of the sheeps must be on the field at the same time!
 	=> END
 else:
+	do get_tree().get_first_node_in_group("SeppoCalling").set_paused(true)
 	Master: Seppo!
 	Master: Go herd some sheep!
 	- Woof

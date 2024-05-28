@@ -110,12 +110,12 @@ offset_right = 797.0
 offset_bottom = 512.0
 texture = ExtResource("2_safr2")
 
-[node name="MasterCallTimer" type="Timer" parent="SheepFarm"]
+[node name="MasterCallTimer" type="Timer" parent="SheepFarm" groups=["SeppoCalling"]]
 wait_time = 30.0
 one_shot = true
 autostart = true
 
-[node name="CallLoop" type="Timer" parent="SheepFarm"]
+[node name="CallLoop" type="Timer" parent="SheepFarm" groups=["SeppoCalling"]]
 wait_time = 5.0
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="SheepFarm"]
@@ -147,6 +147,6 @@ shape = SubResource("RectangleShape2D_pww50")
 [node name="PauseMenu" parent="SheepFarm" instance=ExtResource("12_cq8wb")]
 
 [connection signal="is_paused" from="." to="SheepFarm/PauseMenu" method="_on_main_is_paused"]
-[connection signal="timeout" from="SheepFarm/MasterCallTimer" to="." method="_on_master_call_timer_timeout"]
-[connection signal="timeout" from="SheepFarm/CallLoop" to="." method="_on_call_loop_timeout"]
+[connection signal="timeout" from="SheepFarm/MasterCallTimer" to="SheepFarm" method="_on_master_call_timer_timeout"]
+[connection signal="timeout" from="SheepFarm/CallLoop" to="SheepFarm" method="_on_call_loop_timeout"]
 [connection signal="finished" from="SheepFarm/MainMusic" to="." method="_on_audio_stream_player_finished"]

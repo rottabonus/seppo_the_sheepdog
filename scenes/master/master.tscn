@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dqdul2urs16s4"]
+[gd_scene load_steps=52 format=3 uid="uid://dqdul2urs16s4"]
 
 [ext_resource type="Script" path="res://scenes/master/master.gd" id="1_5542k"]
 [ext_resource type="Texture2D" uid="uid://de42gu6jaiwbl" path="res://img/farmer_shrug.png" id="1_w2xp8"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://c1psvespukkfm" path="res://scenes/misc/bone.tscn" id="8_t5mih"]
 [ext_resource type="AudioStream" uid="uid://3a6xul7nh0vj" path="res://sound/ch_en_1.wav" id="9_a5yuo"]
 [ext_resource type="AudioStream" uid="uid://cfmhvlj08hlxu" path="res://sound/ch_en_2.wav" id="10_sqpna"]
+[ext_resource type="AudioStream" uid="uid://lwn4esov6pk2" path="res://sound/ints_en_1.wav" id="11_lum7j"]
+[ext_resource type="AudioStream" uid="uid://ltxqjg46ypf6" path="res://sound/end_en_1.wav" id="12_8qwra"]
+[ext_resource type="AudioStream" uid="uid://4vds4mc4ffhm" path="res://sound/gs_en_2.wav" id="13_m1cjb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4mqi"]
 radius = 7.0
@@ -311,3 +314,17 @@ position = Vector2(-3, 3)
 
 [node name="SeppoCaller" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_e4hof")
+
+[node name="HalfDoneShout" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_lum7j")
+
+[node name="AllDoneShout" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_8qwra")
+
+[node name="GoodBoyShout" type="AudioStreamPlayer2D" parent="." groups=["GoodBoyShouter"]]
+stream = ExtResource("13_m1cjb")
+
+[node name="ShoutTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="ShoutTimer" to="." method="_on_shout_timer_timeout"]
