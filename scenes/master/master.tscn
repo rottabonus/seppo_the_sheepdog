@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dqdul2urs16s4"]
+[gd_scene load_steps=49 format=3 uid="uid://dqdul2urs16s4"]
 
 [ext_resource type="Script" path="res://scenes/master/master.gd" id="1_5542k"]
 [ext_resource type="Texture2D" uid="uid://de42gu6jaiwbl" path="res://img/farmer_shrug.png" id="1_w2xp8"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://6fxydf7h4vhu" path="res://scenes/misc/actionable.tscn" id="6_01hss"]
 [ext_resource type="Resource" uid="uid://dl80fyrnpljv1" path="res://dialogue/master.dialogue" id="7_vq8pg"]
 [ext_resource type="PackedScene" uid="uid://c1psvespukkfm" path="res://scenes/misc/bone.tscn" id="8_t5mih"]
+[ext_resource type="AudioStream" uid="uid://3a6xul7nh0vj" path="res://sound/ch_en_1.wav" id="9_a5yuo"]
+[ext_resource type="AudioStream" uid="uid://cfmhvlj08hlxu" path="res://sound/ch_en_2.wav" id="10_sqpna"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4mqi"]
 radius = 7.0
@@ -276,6 +278,13 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u5yt1"]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e4hof"]
+streams_count = 2
+stream_0/stream = ExtResource("9_a5yuo")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_sqpna")
+stream_1/weight = 1.0
+
 [node name="Master" type="StaticBody2D" groups=["Master"]]
 position = Vector2(166, 60)
 script = ExtResource("1_5542k")
@@ -299,3 +308,6 @@ debug_color = Color(0.575128, 0.537749, 0.378893, 0.42)
 [node name="Bone" parent="." instance=ExtResource("8_t5mih")]
 z_index = -1
 position = Vector2(-3, 3)
+
+[node name="SeppoCaller" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_e4hof")

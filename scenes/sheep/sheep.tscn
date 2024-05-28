@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://h7jba8nvsxed"]
+[gd_scene load_steps=42 format=3 uid="uid://h7jba8nvsxed"]
 
 [ext_resource type="Script" path="res://scenes/sheep/sheep.gd" id="1_gjao2"]
 [ext_resource type="Texture2D" uid="uid://k48gbe8et0hr" path="res://img/back_walk.png" id="2_40vdm"]
@@ -9,6 +9,10 @@
 [ext_resource type="Script" path="res://scenes/sheep/sheep_walk.gd" id="7_enqrc"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_idle.gd" id="9_7er7s"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_get_herded.gd" id="9_38dx1"]
+[ext_resource type="AudioStream" uid="uid://b8dvb85sdmxeo" path="res://sound/sheep_1.wav" id="10_4w5og"]
+[ext_resource type="AudioStream" uid="uid://ddxi40l1jn284" path="res://sound/sheep_2.wav" id="11_dwulo"]
+[ext_resource type="AudioStream" uid="uid://c4stuu3krw7gd" path="res://sound/sheep_3.wav" id="12_4es2n"]
+[ext_resource type="AudioStream" uid="uid://vblpkfu2yko0" path="res://sound/sheep_4.wav" id="13_4im82"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqxb3"]
 atlas = ExtResource("2_40vdm")
@@ -207,6 +211,17 @@ radius = 8.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nv3dx"]
 radius = 8.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ijswl"]
+streams_count = 4
+stream_0/stream = ExtResource("10_4w5og")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("11_dwulo")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("12_4es2n")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("13_4im82")
+stream_3/weight = 1.0
+
 [node name="Sheep" type="CharacterBody2D" groups=["Sheep"]]
 disable_mode = 1
 collision_mask = 5
@@ -243,6 +258,9 @@ script = ExtResource("9_7er7s")
 [node name="SheepGetHerded" type="Node" parent="StateMachine" node_paths=PackedStringArray("sheep")]
 script = ExtResource("9_38dx1")
 sheep = NodePath("../..")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_ijswl")
 
 [connection signal="body_entered" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_entered"]
 [connection signal="body_exited" from="SheepCollisionArea" to="." method="_on_sheep_collision_area_body_exited"]

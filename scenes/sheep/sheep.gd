@@ -28,8 +28,7 @@ func get_herded():
 	$StateMachine.change_state("SheepGetHerded")
 
 func on_goal_entered():
-	print("i was herded!")
-	# play a cool sound to make player happy
+	$AudioStreamPlayer.play()
 
 func _on_sheep_collision_area_body_exited(body):
 	if body.name == "Player":

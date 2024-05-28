@@ -1,11 +1,15 @@
-[gd_scene load_steps=35 format=3 uid="uid://bor04e6fwvy54"]
+[gd_scene load_steps=40 format=3 uid="uid://bor04e6fwvy54"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_q0ssl"]
 [ext_resource type="Texture2D" uid="uid://d2mr2tam4vt4i" path="res://img/dog_idle.png" id="2_uxks8"]
 [ext_resource type="Texture2D" uid="uid://bp6inde10btbj" path="res://img/dog_run.png" id="3_0ype1"]
 [ext_resource type="Texture2D" uid="uid://blb0bibvwq32b" path="res://img/run_back.png" id="4_84svt"]
 [ext_resource type="Texture2D" uid="uid://fcgbrpip4qqp" path="res://img/run_twrd.png" id="4_wybxf"]
-[ext_resource type="AudioStream" uid="uid://bhd8esv2esafs" path="res://sound/hau.wav" id="5_3jcr5"]
+[ext_resource type="AudioStream" uid="uid://ci1k8oak2c7ex" path="res://sound/woof_1.wav" id="6_tr6ku"]
+[ext_resource type="AudioStream" uid="uid://cwhtottu2vjra" path="res://sound/woof_2.wav" id="7_1j8vc"]
+[ext_resource type="AudioStream" uid="uid://wtvldbxjq3rw" path="res://sound/woof_5.wav" id="8_rhnjw"]
+[ext_resource type="AudioStream" uid="uid://by6eres5pjofy" path="res://sound/woof_6.wav" id="9_bpw7q"]
+[ext_resource type="AudioStream" uid="uid://bv1katk7r5avs" path="res://sound/woof_8.wav" id="10_goeh8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yroi6"]
 atlas = ExtResource("2_uxks8")
@@ -209,6 +213,19 @@ animations = [{
 radius = 7.0
 height = 24.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_06nnb"]
+streams_count = 5
+stream_0/stream = ExtResource("6_tr6ku")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("7_1j8vc")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("8_rhnjw")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("9_bpw7q")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("10_goeh8")
+stream_4/weight = 1.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_207c1"]
 radius = 44.0454
 
@@ -227,8 +244,8 @@ position = Vector2(0, 9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_m3q6g")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_3jcr5")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_06nnb")
 
 [node name="BarkInfluence" type="Area2D" parent="."]
 collision_mask = 17
