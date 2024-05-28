@@ -34,8 +34,8 @@ grow_horizontal = 2
 
 [node name="MadeBy" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Made by rottabonus"
+text = "redits.madeby"
 
 [node name="ThankYou" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Thank you for playing"
+text = "credits.thanks"

@@ -27,3 +27,11 @@ func _on_exit_button_pressed():
 func _on_texture_button_pressed():
 	var current_mute = AudioServer.is_bus_mute(0)
 	AudioServer.set_bus_mute(0, !current_mute)
+
+
+func _on_icon_en_pressed():
+	TranslationServer.set_locale("en")
+
+
+func _on_icon_fi_pressed():
+	TranslationServer.set_locale("fi")

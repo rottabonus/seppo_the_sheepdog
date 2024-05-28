@@ -1,10 +1,10 @@
 ~ start
 
-In that quiet moment as Seppo catched the bone. He felt a profound realization wash over him. 
-His master, who had always been there, who had cared for him, fed him, and shown him love, was the embodiment of goodness.
-The treats, the kind words, the gentle pats on the head.
-These were not just acts of kindness, but expressions of a deeper truth.
-Seppo understood that the 'good boy' was not just about being a dog or fulfilling a role. It was about the connection, the bond between souls.
+In that quiet moment as Seppo catched the bone. He felt a profound realization wash over him. [ID:t6e706c9b28] 
+His master, who had always been there, who had cared for him, fed him, and shown him love, was the embodiment of goodness. [ID:t92205191ac]
+The treats, the kind words, the gentle pats on the head. [ID:t4924804411]
+These were not just acts of kindness, but expressions of a deeper truth. [ID:t34d4593e57]
+Seppo understood that the 'good boy' was not just about being a dog or fulfilling a role. It was about the connection, the bond between souls. [ID:tae85aaec1b]
 do get_tree().change_scene_to_file("res://scenes/ui/credits.tscn")
 
 => END

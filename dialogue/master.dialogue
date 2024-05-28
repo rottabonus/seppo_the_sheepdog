@@ -5,37 +5,37 @@ do get_tree().get_first_node_in_group("Master").play("talk")
 
 if Globals.herding_state.herding_time == 45:
 	do get_tree().get_first_node_in_group("Master").play("shrug")
-	Master: I thought you were a good boy!
-	Master: Instead it appears you are a SLOW boy!
+	Master: I thought you were a good boy! [ID:t5ec887fbc4]
+	Master: Instead it appears you are a SLOW boy! [ID:t16a6d2da2e]
 	=> bad_ending/start
 
 if Globals.herding_state.are_sheep_herded == true:
-	Master: Who is a good boy?
+	Master: Who is a good boy? [ID:t55c967afb8]
 	do get_tree().get_first_node_in_group("Master").play("thumb_up")
 	do get_tree().get_first_node_in_group("GoodBoyShouter").play()
-	Master: You herded the sheep in {{Globals.herding_state.herding_time}} seconds!
-	Master: Look what I got here for you!
+	Master: You herded the sheep in {{Globals.herding_state.herding_time}} seconds! [ID:tebe456676d]
+	Master: Look what I got here for you! [ID:t98d5f095e7]
 	do get_tree().get_first_node_in_group("Master").play("throw")
 	=> END
 	
 if Globals.has_player_talked_to_master == true:
 	do get_tree().get_first_node_in_group("Master").play("shrug")
 	if Globals.herding_state.is_first_zone_herded == true:
-		Master: Now herd them sheeps to the field on the left side!
+		Master: Now herd them sheeps to the field on the left side! [ID:t46360257b5]
 	else:
-		Master: You have to herd the sheeps to the field on the right side, then to the left side! Remember that all of the sheeps must be on the field at the same time!
+		Master: You have to herd the sheeps to the field on the right side, then to the left side! Remember that all of the sheeps must be on the field at the same time! [ID:t2a3e445cf1]
 	=> END
 else:
 	do get_tree().get_first_node_in_group("SeppoCalling").set_paused(true)
 	do get_tree().get_first_node_in_group("WhoIsAGoodBoyShouter").play()
-	Master: Seppo!
-	Master: Go herd some sheep!
-	- Woof
-	- Bark
-	Master: First herd them to the field on the right side and then to the left side. 
-	Master: All of the sheeps must be on the field at the same time.
+	Master: Seppo! [ID:tc0378932ca]
+	Master: Go herd some sheep! [ID:te5becab56c]
+	- Woof [ID:t9782e1a875]
+	- Bark [ID:tc140b8a24a]
+	Master: First herd them to the field on the right side and then to the left side. [ID:tbdb56e3914] 
+	Master: All of the sheeps must be on the field at the same time. [ID:t2186fa29e4]
 
-Master: Well go on then!
+Master: Well go on then! [ID:tacbfaddd67]
 set Globals.has_player_talked_to_master = true
 do get_tree().get_first_node_in_group("HerdingZone").start_herding()
 => END

@@ -63,6 +63,15 @@ bark={
 
 [internationalization]
 
+locale/translation_remaps={
+"res://sound/ch_en_1.wav": PackedStringArray("res://sound/ch_fi_1.wav:fi"),
+"res://sound/ch_en_2.wav": PackedStringArray("res://sound/ch_fi_2.wav:fi"),
+"res://sound/end_en_1.wav": PackedStringArray("res://sound/gs_fi_1.wav:fi"),
+"res://sound/gs_en_2.wav": PackedStringArray("res://sound/gs_fi_2.wav:fi"),
+"res://sound/ints_en_1.wav": PackedStringArray("res://sound/ints_fi_1.wav:fi"),
+"res://sound/wgb_en_2.wav": PackedStringArray("res://sound/wgb_fi_2.wav:fi")
+}
+locale/translations=PackedStringArray("res://translations.en.translation", "res://translations.fi.translation")
 locale/translations_pot_files=PackedStringArray("res://dialogue/master.dialogue", "res://dialogue/first.dialogue", "res://dialogue/bad_ending.dialogue", "res://dialogue/true_ending.dialogue")
 
 [layer_names]

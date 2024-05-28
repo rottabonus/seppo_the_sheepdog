@@ -149,4 +149,4 @@ shape = SubResource("RectangleShape2D_pww50")
 [connection signal="is_paused" from="." to="SheepFarm/PauseMenu" method="_on_main_is_paused"]
 [connection signal="timeout" from="SheepFarm/MasterCallTimer" to="SheepFarm" method="_on_master_call_timer_timeout"]
 [connection signal="timeout" from="SheepFarm/CallLoop" to="SheepFarm" method="_on_call_loop_timeout"]
-[connection signal="finished" from="SheepFarm/MainMusic" to="." method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="SheepFarm/MainMusic" to="SheepFarm" method="_on_main_music_finished"]
