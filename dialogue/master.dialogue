@@ -24,9 +24,11 @@ if Globals.has_player_talked_to_master == true:
 	=> END
 else:
 	Master: Seppo!
-	Master: Go herd some sheep! You have to herd the sheeps first to the field on the right side and then to the left side. All of the sheeps must be on the field at the same time.
+	Master: Go herd some sheep!
 	- Woof
 	- Bark
+	Master: First herd them to the field on the right side and then to the left side. 
+	Master: All of the sheeps must be on the field at the same time.
 
 Master: Well go on then!
 set Globals.has_player_talked_to_master = true

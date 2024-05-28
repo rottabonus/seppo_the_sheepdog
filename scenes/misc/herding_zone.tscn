@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://byna2mjx2aih3"]
 
-[ext_resource type="Script" path="res://scenes/misc/HerdingZone.gd" id="1_cewdk"]
-[ext_resource type="PackedScene" uid="uid://jp8vhb37ary1" path="res://scenes/misc/grass_tile_map.tscn" id="2_f2xs5"]
+[ext_resource type="Script" path="res://scenes/misc/herding_zone.gd" id="1_cewdk"]
+[ext_resource type="PackedScene" uid="uid://jp8vhb37ary1" path="res://scenes/misc/grass_tilemap.tscn" id="2_f2xs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouuop"]
 size = Vector2(201.5, 135)

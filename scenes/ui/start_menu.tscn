@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dngcljgx05j38"]
 
-[ext_resource type="Script" path="res://scenes/misc/startmenu.gd" id="1_r8cg6"]
+[ext_resource type="Script" path="res://scenes/ui/start_menu.gd" id="1_5acx0"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -8,7 +8,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
-script = ExtResource("1_r8cg6")
+script = ExtResource("1_5acx0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0

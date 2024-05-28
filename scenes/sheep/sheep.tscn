@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://f50uyppb6ga6" path="res://img/idle.png" id="2_kej0n"]
 [ext_resource type="Texture2D" uid="uid://icc1mjh35kpy" path="res://img/front_walk.png" id="3_qkwxi"]
 [ext_resource type="Texture2D" uid="uid://btc1pplvx2hja" path="res://img/side_walk.png" id="5_mv3yw"]
-[ext_resource type="PackedScene" uid="uid://dndcajd3hrgp4" path="res://scenes/misc/StateMachine.tscn" id="6_he6ar"]
+[ext_resource type="PackedScene" uid="uid://dndcajd3hrgp4" path="res://scenes/misc/state_machine.tscn" id="6_he6ar"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_walk.gd" id="7_enqrc"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_idle.gd" id="9_7er7s"]
 [ext_resource type="Script" path="res://scenes/sheep/sheep_get_herded.gd" id="9_38dx1"]

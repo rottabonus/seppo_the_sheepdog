@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://jp8vhb37ary1"]
 
-[ext_resource type="Texture2D" uid="uid://dbrjqk7ulfou4" path="res://img/grass_1.png" id="1_k8mod"]
+[ext_resource type="Texture2D" uid="uid://dbrjqk7ulfou4" path="res://img/grass_1.png" id="1_dppxt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vp7d"]
-texture = ExtResource("1_k8mod")
+texture = ExtResource("1_dppxt")
 0:0/size_in_atlas = Vector2i(3, 3)
 0:0/0 = 0
 0:0/0/y_sort_origin = -17
