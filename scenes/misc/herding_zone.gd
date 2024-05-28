@@ -32,8 +32,6 @@ func _on_body_entered(body):
 		elif current == goal:
 			$Zone2.set_deferred('disabled', true)
 			Globals.herding_state.are_sheep_herded = true
-			print("herding_max ", herding_max)
-			print("time left ", $HerdingTimer.get_time_left())
 			Globals.herding_state.herding_time = to_decimal(herding_max - $HerdingTimer.get_time_left(), 2)
 			$HerdingTimer.stop()
 			master.shout("all_done")

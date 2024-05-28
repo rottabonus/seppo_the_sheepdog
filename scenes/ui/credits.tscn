@@ -31,10 +31,11 @@ offset_top = 56.0
 offset_right = 87.0
 offset_bottom = 106.0
 grow_horizontal = 2
+alignment = 1
 
 [node name="MadeBy" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "redits.madeby"
+text = "credits.madeby"
 
 [node name="ThankYou" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
