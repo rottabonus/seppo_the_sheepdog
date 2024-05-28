@@ -1,0 +1,7 @@
+~ start
+
+And so it happened that the mystery of the 'good boy' remained as such for Seppo for the rest of his life...
+Until he did figure it out on his next playthrough.
+do get_tree().change_scene_to_file("res://scenes/ui/start_menu.tscn")
+
+=> END

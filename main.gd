@@ -3,7 +3,12 @@ extends Node
 signal is_paused(next)
 
 func _ready():
-	pass
+	Globals.has_player_talked_to_master = false
+	Globals.herding_state = {
+			"is_first_zone_herded": false,
+			"are_sheep_herded": false,
+			"herding_time": 0
+	}
 	
 	
 func _unhandled_input(event: InputEvent):

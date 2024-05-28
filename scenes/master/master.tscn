@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dqdul2urs16s4"]
+[gd_scene load_steps=53 format=3 uid="uid://dqdul2urs16s4"]
 
 [ext_resource type="Script" path="res://scenes/master/master.gd" id="1_5542k"]
 [ext_resource type="Texture2D" uid="uid://de42gu6jaiwbl" path="res://img/farmer_shrug.png" id="1_w2xp8"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://lwn4esov6pk2" path="res://sound/ints_en_1.wav" id="11_lum7j"]
 [ext_resource type="AudioStream" uid="uid://ltxqjg46ypf6" path="res://sound/end_en_1.wav" id="12_8qwra"]
 [ext_resource type="AudioStream" uid="uid://4vds4mc4ffhm" path="res://sound/gs_en_2.wav" id="13_m1cjb"]
+[ext_resource type="AudioStream" uid="uid://soxt7vb78iva" path="res://sound/wgb_en_2.wav" id="14_4y1xo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4mqi"]
 radius = 7.0
@@ -326,5 +327,8 @@ stream = ExtResource("13_m1cjb")
 
 [node name="ShoutTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="WhoIsAGoodBoyShout" type="AudioStreamPlayer2D" parent="." groups=["WhoIsAGoodBoyShouter"]]
+stream = ExtResource("14_4y1xo")
 
 [connection signal="timeout" from="ShoutTimer" to="." method="_on_shout_timer_timeout"]

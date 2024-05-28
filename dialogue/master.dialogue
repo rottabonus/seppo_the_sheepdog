@@ -1,3 +1,5 @@
+import "res://dialogue/bad_ending.dialogue" as bad_ending
+
 ~ start
 do get_tree().get_first_node_in_group("Master").play("talk")
 
@@ -5,7 +7,7 @@ if Globals.herding_state.herding_time == 45:
 	do get_tree().get_first_node_in_group("Master").play("shrug")
 	Master: I thought you were a good boy!
 	Master: Instead it appears you are a SLOW boy!
-	=> END
+	=> bad_ending/start
 
 if Globals.herding_state.are_sheep_herded == true:
 	Master: Who is a good boy?
@@ -25,6 +27,7 @@ if Globals.has_player_talked_to_master == true:
 	=> END
 else:
 	do get_tree().get_first_node_in_group("SeppoCalling").set_paused(true)
+	do get_tree().get_first_node_in_group("WhoIsAGoodBoyShouter").play()
 	Master: Seppo!
 	Master: Go herd some sheep!
 	- Woof

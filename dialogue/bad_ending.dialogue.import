@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cf132vae4hefd"
+path="res://.godot/imported/bad_ending.dialogue-ab2bca691e711a9b21de44c0f5f110c6.tres"
+
+[deps]
+
+source_file="res://dialogue/bad_ending.dialogue"
+dest_files=["res://.godot/imported/bad_ending.dialogue-ab2bca691e711a9b21de44c0f5f110c6.tres"]
+
+[params]
+
+defaults=true

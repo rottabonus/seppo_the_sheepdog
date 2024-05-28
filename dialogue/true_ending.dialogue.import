@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cgmou15irvngp"
+path="res://.godot/imported/true_ending.dialogue-2bad1944f6b51199d3b6ca482eaf201e.tres"
+
+[deps]
+
+source_file="res://dialogue/true_ending.dialogue"
+dest_files=["res://.godot/imported/true_ending.dialogue-2bad1944f6b51199d3b6ca482eaf201e.tres"]
+
+[params]
+
+defaults=true

@@ -47,5 +47,5 @@ func ending_thoughts():
 	$Camera2D.zoom.y += 1.5
 	velocity = Vector2()
 	speed = 0
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/final_thoughts.dialogue"), "start")
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/true_ending.dialogue"), "start")
 	

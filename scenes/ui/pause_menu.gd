@@ -22,3 +22,8 @@ func _on_restart_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
+
+
+func _on_texture_button_pressed():
+	var current_mute = AudioServer.is_bus_mute(0)
+	AudioServer.set_bus_mute(0, !current_mute)

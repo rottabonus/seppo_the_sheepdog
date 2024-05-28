@@ -5,6 +5,6 @@ His master, who had always been there, who had cared for him, fed him, and shown
 The treats, the kind words, the gentle pats on the head.
 These were not just acts of kindness, but expressions of a deeper truth.
 Seppo understood that the 'good boy' was not just about being a dog or fulfilling a role. It was about the connection, the bond between souls.
-# TODO: here ending credits roll!
+do get_tree().change_scene_to_file("res://scenes/ui/credits.tscn")
 
 => END

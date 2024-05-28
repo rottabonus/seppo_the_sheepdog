@@ -63,7 +63,7 @@ bark={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/master.dialogue", "res://dialogue/final_thoughts.dialogue", "res://dialogue/first.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/master.dialogue", "res://dialogue/first.dialogue", "res://dialogue/bad_ending.dialogue", "res://dialogue/true_ending.dialogue")
 
 [layer_names]
 
