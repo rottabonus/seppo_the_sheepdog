@@ -29,6 +29,10 @@ process_mode = 1
 y_sort_enabled = true
 script = ExtResource("2_fjo6e")
 
+[node name="MainMusic" type="AudioStreamPlayer" parent="SheepFarm"]
+process_mode = 3
+stream = ExtResource("8_mxg0j")
+
 [node name="HerdingZone" parent="SheepFarm" groups=["HerdingZone"] instance=ExtResource("6_ejh20")]
 position = Vector2(378, 140)
 goal = 5
@@ -138,10 +142,6 @@ shape = SubResource("RectangleShape2D_pww50")
 
 [node name="PauseMenu" parent="SheepFarm" instance=ExtResource("12_cq8wb")]
 
-[node name="MainMusic" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("8_mxg0j")
-
 [connection signal="is_paused" from="." to="SheepFarm/PauseMenu" method="_on_main_is_paused"]
+[connection signal="finished" from="SheepFarm/MainMusic" to="SheepFarm" method="_on_main_music_finished"]
 [connection signal="timeout" from="SheepFarm/CallLoop" to="SheepFarm" method="_on_call_loop_timeout"]
-[connection signal="finished" from="MainMusic" to="SheepFarm" method="_on_main_music_finished"]

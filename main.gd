@@ -9,7 +9,7 @@ func _ready():
 			"are_sheep_herded": false,
 			"herding_time": 0
 	}
-	$MainMusic.play()
+	$SheepFarm/MainMusic.play()
 	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
 	
 	
