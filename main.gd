@@ -10,7 +10,9 @@ func _ready():
 			"herding_time": 0
 	}
 	$SheepFarm/MainMusic.play()
+	DialogueManager.dialogue_ended.connect(_on_dialogue_manager_dialogue_ended)
 	DialogueManager.show_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
+
 	
 	
 func _unhandled_input(event: InputEvent):
@@ -19,3 +21,8 @@ func _unhandled_input(event: InputEvent):
 		var next_pause = !current_pause
 		get_tree().paused = next_pause
 		is_paused.emit(next_pause)
+
+
+func _on_dialogue_manager_dialogue_ended(resource: DialogueResource) -> void:
+	if(resource.resource_path == 'res://dialogue/true_ending.dialogue'):
+		get_tree().change_scene_to_file("res://scenes/ui/credits.tscn")
