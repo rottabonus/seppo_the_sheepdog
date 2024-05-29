@@ -8,9 +8,6 @@ var current: int
 
 func _ready():
 	current = 0
-
-func _process(_delta):
-	pass
 	
 func start_herding():
 	$Zone1.set_disabled(false)

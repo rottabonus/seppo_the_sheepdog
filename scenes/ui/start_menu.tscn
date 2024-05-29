@@ -51,6 +51,7 @@ flat = true
 
 [node name="IconContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="IconEn" type="TextureButton" parent="VBoxContainer/IconContainer"]
 layout_mode = 2

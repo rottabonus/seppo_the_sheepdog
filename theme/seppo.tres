@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://pprgnwdohjwj"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://pprgnwdohjwj"]
 
 [ext_resource type="StyleBox" uid="uid://c2w5dl2bawi2" path="res://theme/button.tres" id="1_ole2s"]
+[ext_resource type="StyleBox" uid="uid://fcqc5nb3wbsc" path="res://theme/button_focus.tres" id="1_sh1iv"]
 [ext_resource type="FontFile" uid="uid://feppurh4vf02" path="res://theme/dogicapixel.ttf" id="2_vclls"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0casx"]
@@ -30,7 +31,7 @@ Button/colors/font_hover_color = Color(0.105882, 0.117647, 0.160784, 1)
 Button/colors/font_hover_pressed_color = Color(0.105882, 0.117647, 0.160784, 1)
 Button/colors/icon_normal_color = Color(0.105882, 0.117647, 0.160784, 1)
 Button/colors/icon_pressed_color = Color(0.105882, 0.117647, 0.160784, 1)
-Button/styles/focus = ExtResource("1_ole2s")
+Button/styles/focus = ExtResource("1_sh1iv")
 Button/styles/hover = SubResource("StyleBoxFlat_0casx")
 Button/styles/normal = ExtResource("1_ole2s")
 Button/styles/pressed = ExtResource("1_ole2s")
