@@ -19,6 +19,10 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Globals="*res://scripts/globals.gd"
 
+[dialogue_manager]
+
+general/balloon_path="res://scenes/dialogue_balloon/balloon.tscn"
+
 [display]
 
 window/size/viewport_width=320

@@ -10,7 +10,7 @@ func _ready():
 			"herding_time": 0
 	}
 	$SheepFarm/MainMusic.play()
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
+	DialogueManager.show_dialogue_balloon(load("res://dialogue/first.dialogue"), "start")
 	
 	
 func _unhandled_input(event: InputEvent):

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crfxuvueif42s" path="res://img/en_hover.png" id="4_7kmfb"]
 [ext_resource type="Texture2D" uid="uid://cf0m7snk4utbn" path="res://img/fi.png" id="5_cduka"]
 [ext_resource type="Texture2D" uid="uid://dkh6y25eq4dfu" path="res://img/fi_hover.png" id="6_33dae"]
-[ext_resource type="Texture2D" uid="uid://c2kt2vothg67p" path="res://img/start_menu_bg.png" id="7_4xymx"]
+[ext_resource type="Texture2D" uid="uid://blukgiuc1u0k8" path="res://img/start_menu_bg.png" id="7_4xymx"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3

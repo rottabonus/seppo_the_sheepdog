@@ -1,6 +1,42 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://pprgnwdohjwj"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://pprgnwdohjwj"]
 
-[ext_resource type="FontFile" uid="uid://qje7xkbvg6hi" path="res://theme/rainyhearts.ttf" id="1_jhisy"]
+[ext_resource type="StyleBox" uid="uid://c2w5dl2bawi2" path="res://theme/button.tres" id="1_ole2s"]
+[ext_resource type="FontFile" uid="uid://feppurh4vf02" path="res://theme/dogicapixel.ttf" id="2_vclls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0casx"]
+bg_color = Color(0.919328, 0.654162, 0.59634, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07452"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48o7y"]
+bg_color = Color(0.917647, 0.654902, 0.596078, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
 
 [resource]
-default_font = ExtResource("1_jhisy")
+default_font = ExtResource("2_vclls")
+default_font_size = 8
+Button/colors/font_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/colors/font_focus_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/colors/font_hover_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/colors/font_hover_pressed_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/colors/icon_normal_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/colors/icon_pressed_color = Color(0.105882, 0.117647, 0.160784, 1)
+Button/styles/focus = ExtResource("1_ole2s")
+Button/styles/hover = SubResource("StyleBoxFlat_0casx")
+Button/styles/normal = ExtResource("1_ole2s")
+Button/styles/pressed = ExtResource("1_ole2s")
+Label/colors/font_color = Color(0.105882, 0.117647, 0.160784, 1)
+Label/colors/font_outline_color = Color(0.105882, 0.117647, 0.160784, 1)
+Label/styles/normal = SubResource("StyleBoxEmpty_07452")
+Panel/styles/panel = SubResource("StyleBoxFlat_48o7y")
+RichTextLabel/colors/default_color = Color(0.105882, 0.117647, 0.160784, 1)
+RichTextLabel/colors/font_outline_color = Color(0.105882, 0.117647, 0.160784, 1)
